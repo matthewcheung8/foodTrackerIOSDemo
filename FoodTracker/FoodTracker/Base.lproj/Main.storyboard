@@ -19,11 +19,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="maV-e6-icf">
-                                <rect key="frame" x="20" y="80" width="560" height="477"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="maV-e6-icf">
+                                <rect key="frame" x="20" y="50" width="560" height="533"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Meal Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QYD-Y9-Vrb">
-                                        <rect key="frame" x="0.0" y="0.0" width="87" height="21"/>
+                                        <rect key="frame" x="237" y="0.0" width="87" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -34,14 +34,14 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uun-G7-KTh">
-                                        <rect key="frame" x="0.0" y="75" width="151" height="30"/>
+                                        <rect key="frame" x="205" y="75" width="151" height="30"/>
                                         <state key="normal" title="Set Default Label Text"/>
                                         <connections>
                                             <action selector="setDefaultLabelText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S6o-qd-5ls"/>
                                         </connections>
                                     </button>
                                     <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="mbe-Ht-594">
-                                        <rect key="frame" x="0.0" y="117" width="360" height="360"/>
+                                        <rect key="frame" x="100" y="117" width="360" height="360"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="mbe-Ht-594" secondAttribute="height" multiplier="1:1" id="gJb-9S-Qu6"/>
@@ -50,6 +50,10 @@
                                             <outletCollection property="gestureRecognizers" destination="4vz-dN-6Xi" appends="YES" id="SWU-Yo-51g"/>
                                         </connections>
                                     </imageView>
+                                    <view contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="44" translatesAutoresizingMaskIntoConstraints="NO" id="lg2-8K-pYh" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
+                                        <rect key="frame" x="160" y="489" width="240" height="44"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="K99-Lh-F0Q" secondAttribute="trailing" id="NxX-vd-aBR"/>
@@ -68,6 +72,7 @@
                         <outlet property="mealNameLabel" destination="QYD-Y9-Vrb" id="eMl-SB-hUu"/>
                         <outlet property="nameTextField" destination="K99-Lh-F0Q" id="96R-nC-qh2"/>
                         <outlet property="photoImageView" destination="mbe-Ht-594" id="qpO-cA-muu"/>
+                        <outlet property="ratingControl" destination="lg2-8K-pYh" id="LEa-63-t3u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
